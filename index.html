@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning King Mark J. Tamparong</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .greeting {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .cat {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        /* Cat Head */
+        .cat-head {
+            width: 120px;
+            height: 120px;
+            background: #FFB347;
+            border-radius: 50% 50% 45% 45%;
+            margin: 0 auto;
+            position: relative;
+            animation: headBounce 1s infinite ease-in-out;
+        }
+
+        /* Cat Ears */
+        .ear {
+            width: 30px;
+            height: 40px;
+            background: #FFB347;
+            position: absolute;
+            top: -20px;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .ear-left {
+            left: 20px;
+        }
+
+        .ear-right {
+            right: 20px;
+        }
+
+        .ear::after {
+            content: '';
+            width: 12px;
+            height: 20px;
+            background: #FFB347;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50% 50% 0 0;
+            background: #FF69B4;
+        }
+
+        /* Eyes */
+        .eyes {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 20px 0;
+            gap: 20px;
+        }
+
+        .eye {
+            width: 15px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+            position: relative;
+            animation: eyeBlink 2s infinite;
+        }
+
+        .eye::after {
+            content: '';
+            width: 6px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 2px;
+        }
+
+        /* Mouth */
+        .mouth {
+            width: 25px;
+            height: 15px;
+            border: 2px solid #333;
+            border-top: none;
+            border-radius: 0 0 25px 25px;
+            margin: 20px auto 0;
+        }
+
+        /* Whiskers */
+        .whisker {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            width: 30px;
+        }
+
+        .whisker-left {
+            left: -35px;
+            top: 50%;
+        }
+
+        .whisker-right {
+            right: -35px;
+            top: 50%;
+        }
+
+        /* Animations */
+        @keyframes headBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes eyeBlink {
+            0%, 49%, 51%, 100% {
+                height: 20px;
+            }
+            50% {
+                height: 2px;
+            }
+        }
+
+        .paw {
+            font-size: 2em;
+            animation: pawWave 1s infinite;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        @keyframes pawWave {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">Good Morning King Mark J. Tamparong! 👑</div>
+        
+        <div class="cat">
+            <div class="cat-head">
+                <div class="ear ear-left"></div>
+                <div class="ear ear-right"></div>
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+                <div class="mouth"></div>
+                <div class="whisker whisker-left"></div>
+                <div class="whisker whisker-right"></div>
+            </div>
+        </div>
+
+        <div class="paw">👋</div>
+    </div>
+</body>
+</html>
